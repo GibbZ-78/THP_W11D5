@@ -36,7 +36,6 @@ const toggleKeyword = (keyword) => {
     } else {
         currentKeywords.push(keyword);
     }
-
     reloadArticles();
 };
 
@@ -76,7 +75,8 @@ const addNewKeyword = (label, keyword) => {
 const reloadArticles = () => {
     document.querySelector('.articlesList').innerHTML = '';
     
-    const articlesToShow = data.articles;
+    const articlesToShow = data.articles.filter(({titre, tags}) => (currentKeywords.map((kw) => tags.includes(kw)).reduce((a,b) => a || b)));
+    
     articlesToShow.forEach((article) => {
         document.querySelector('.articlesList').innerHTML += `
             <article>
@@ -108,8 +108,7 @@ const resetInput = () => {
 // Clean a keyword to lowercase and without special characters
 // TODO: Make the cleaning
 const cleanedKeyword = (keyword) => {
-    const cleanedKeyword = keyword;
-
+    const cleanedKeyword = keyword.toLowerCase().replace(/[^a-z0-9]/g, '');
     return cleanedKeyword;
 };
 
@@ -123,12 +122,12 @@ const showKeywordsList = (value) => {
     if (value.length >= 3) {
         const keyWordUl = document.querySelector(".inputKeywordsHandle ul");
         resetKeywordsUl();
-        
+        let myTab = allKeywords.filter((kw) => cleanedKeyword(kw).includes(cleanedKeyword(value)));
         // This will allow you to add a new element in the list under the text input
         // On click, we add the keyword, like so:
-        // keyWordUl.innerHTML += `
-        //    <li onclick="addNewKeyword(`${keyword}`, `${cleanedKeyword(keyword)}`)">${keyword}</li>
-        // `;
+        myTab.map((keyword) => {
+            keyWordUl.innerHTML += "<li onclick='addNewKeyword("+keyword+","+cleanedKeyword(keyword)+");'>"+ keyword + "</li>";
+        });
     }
 };
 

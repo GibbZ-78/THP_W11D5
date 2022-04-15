@@ -1,14 +1,14 @@
 const data = {
   "articles": [
     {
-      "titre": "Devenir influenceur en 2020, tous nos conseils (la 4ème va vous étonner",
+      "titre": "Devenir influenceur en 2020, tous nos conseils (le 4ème va vous étonner !)",
       "tags": [
         "twitch",
         "influenceur"
       ]
     },
     {
-      "titre": "Passer un confinement sans s'ennuyer",
+      "titre": "Surmonter un confinement... Sans s'ennuyer (trop)",
       "tags": [
         "netflix",
         "switch",
@@ -17,7 +17,7 @@ const data = {
       ] 
     },
     {
-      "titre": "Mes conseils 2020 de lecture",
+      "titre": "Mes conseils 2022 de lecture",
       "tags": [
         "lecture",
         "livres",
@@ -25,7 +25,7 @@ const data = {
       ] 
     },
     {
-      "titre": "Devenir Front-End en 2020",
+      "titre": "Devenir développeur front-end en 2022",
       "tags": [
         "frontend",
         "javascript",
@@ -33,14 +33,14 @@ const data = {
       ] 
     },
     {
-      "titre": "Notre top des films à absolument voir !",
+      "titre": "Notre top des films à voir a-bso-lu-ment !",
       "tags": [
         "straming",
         "netflix"
       ] 
     },
     {
-      "titre": "Les concepts ES6 à absolument connaître qui égayeront votre vie !",
+      "titre": "Les concepts ES6 à connaître qui égayeront votre vie !",
       "tags": [
         "es6",
         "javascript",
@@ -60,7 +60,7 @@ const data = {
       ] 
     },
     {
-      "titre": "TOP 10 des pires copies de films (Feat Lama Faché)",
+      "titre": "TOP 10 des pires copies de films (Feat. Lama Faché)",
       "tags": [
           "film",
           "streaming",
